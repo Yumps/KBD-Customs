@@ -1,4 +1,4 @@
-### KBD Customs
+# KBD Customs
 An app to help provide easier resources and a builder to help manage your browser tabs for custom keyboards.
 
 ## Clone the repo
