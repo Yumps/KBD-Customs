@@ -11,6 +11,13 @@ class ApplicationViews extends Component {
     build: []
   };
 
+  deleteBuild = (id) =>
+    KeyboardManager.delete("build", id)
+      .then(KeyboardManager.getAll)
+      .then(builds => {
+        this.setState({ build: builds });
+      });
+
   componentDidMount() {
     KeyboardManager.getAll("build").then(allBuilds => {
       this.setState({
@@ -32,7 +39,13 @@ class ApplicationViews extends Component {
         <Route
           path="/my-builds"
           render={props => {
-            return <Builds {...props} build={this.state.build} />;
+            return (
+              <Builds
+                {...props}
+                build={this.state.build}
+                deleteBuild={this.deleteBuild}
+              />
+            );
           }}
         />
       </>

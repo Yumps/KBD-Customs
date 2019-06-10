@@ -15,31 +15,49 @@ class Builds extends Component {
       <div>
         <br />
         <CardDeck>
-        {this.props.build.map(build => (
-          <Col key={build.id}>
+          {this.props.build.map(build => (
+            <Col key={build.id}>
               <Card>
                 <CardHeader>{build.name}</CardHeader>
                 <CardBody>
                   <CardText>
-                    Case: {build.case.name}
+                    Case:
                     <br />
-                    PCB: {build.pcbId}
-                    <br />
-                    Key Switch: {build.keyswitchId}
-                    <br />
-                    Key Caps: {build.keycapId}
+                    {build.case.name}
                   </CardText>
-                  <Button outline color="danger">
+                   <CardText>
+                    PCB:
+                    <br />
+                    {build.pcb.name}
+                    </CardText>
+                    <CardText>
+                    Key Switch:
+                    <br />
+                    {build.keyswitch.name}
+                    </CardText>
+                    <CardText>
+                    Key Caps:
+                    <br />
+                    {build.keycap.name}
+                    </CardText>
+                  <Button
+                    outline
+                    color="danger"
+                    onClick={() => this.props.deleteBuild(build.id)}
+                  >
                     Delete
                   </Button>{" "}
                   <Button outline color="primary">
                     Edit
+                  </Button>{" "}
+                  <Button outline color="warning">
+                    Details
                   </Button>
                 </CardBody>
               </Card>
               <br />
-          </Col>
-        ))}
+            </Col>
+          ))}
         </CardDeck>
       </div>
     );
