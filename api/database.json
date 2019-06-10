@@ -14,14 +14,26 @@
   "build": [
     {
       "id": 1,
-      "user_id": 1,
-      "case_id": 1,
-      "keyswitch_id": 1,
-      "keycap_id": 1,
+      "name": "THE FAT BOY",
+      "userId": 1,
+      "caseId": 1,
+      "pcbId": 1,
+      "keyswitchId": 1,
+      "keycapId": 1,
+      "public": false
+    },
+    {
+      "id": 2,
+      "name": "DAT BOY",
+      "userId": 1,
+      "caseId": 3,
+      "pcbId": 1,
+      "keyswitchId": 1,
+      "keycapId": 1,
       "public": false
     }
   ],
-  "case": [
+  "cases": [
     {
       "id": 1,
       "image_url": "https://cdn.shopify.com/s/files/1/1473/3902/products/8b9cc7c9808a81fc8db0eaf67a4d79d7_0fe7f2bb-3143-483b-8075-6200c264ee2e_1800x1800.jpg?v=1559276641",
@@ -95,7 +107,7 @@
       "price": "$10.00"
     }
   ],
-  "pcb": [
+  "pcbs": [
     {
       "id": 1,
       "image_url": "https://cdn.shopify.com/s/files/1/1473/3902/products/2_1b7d0470-f28a-4f93-9c2a-2df8030215e5_1800x1800.jpg?v=1558591201",
@@ -153,7 +165,7 @@
       "price": "$58.00"
     }
   ],
-  "key-switch": [
+  "keyswitches": [
     {
       "id": 1,
       "image_url": "https://cdn.shopify.com/s/files/1/0490/7329/products/zealios2.jpeg?v=1547851751",
@@ -227,7 +239,7 @@
       "price": "Out of Stock"
     }
   ],
-  "keycap": [
+  "keycaps": [
     {
       "id": 1,
       "image_url": "https://massdrop-s3.imgix.net/product-images/dwarf-factory-miracle-island-artisan-keycap/FP/YTEm79VzTFWnAZDGiTrr_006.jpg?auto=format&fm=jpg&fit=crop&w=955&bg=f0f0f0&dpr=2",

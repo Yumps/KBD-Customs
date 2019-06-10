@@ -1,17 +1,17 @@
 import React, { Component } from "react";
-import { Navbar, Nav, Col } from "reactstrap";
+import { Navbar, Nav, Col} from "reactstrap";
 import { Link } from "react-router-dom";
 class NavBar extends Component {
   render() {
     return (
       <div>
-        <Navbar color="light" light expand="md">
+        <Navbar color="primary" light expand="md">
           <Nav className="ml-auto">
-            <Link to="/home">Home</Link>
+            <Link className="text-light" to="/">Home</Link>
             <Col>
-              <Link to="/my-builds">My Builds</Link>
+              <Link className="text-light" to="/my-builds">My Builds</Link>
             </Col>
-            <Link to="/shared-builds">Build Guides</Link>
+            <Link className="text-light" to="/shared-builds">Build Guides</Link>
           </Nav>
         </Navbar>
       </div>
