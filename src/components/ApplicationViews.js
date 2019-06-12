@@ -3,23 +3,46 @@ import { withRouter } from "react-router";
 import { Route } from "react-router-dom";
 
 import Home from "./Home/Home";
-import Builds from "./My Builds/myBuilds";
+import Builds from "./KeyboardBuilder/myBuilds";
 import KeyboardManager from "../modules/KeyboardManager";
+import BuildForm from "./KeyboardBuilder/buildForm";
+import EditBuild from "./KeyboardBuilder/editBuilds";
 
 class ApplicationViews extends Component {
   state = {
-    build: []
+    build: [],
+    case: [],
+    pcb: [],
+    keyswitch: [],
+    keycap: []
   };
 
-  deleteBuild = (id) =>
+  deleteBuild = id =>
     KeyboardManager.delete("build", id)
-      .then(KeyboardManager.getAll)
+      .then(KeyboardManager.getAllBuilds)
       .then(builds => {
         this.setState({ build: builds });
       });
 
+  addBuild = newBuild =>
+    KeyboardManager.post("build", newBuild)
+      .then(KeyboardManager.getAllBuilds)
+      .then(builds =>
+        this.setState({
+          build: builds
+        })
+      );
+
+  updateBuild = patch =>
+    KeyboardManager.edit("build", patch)
+      .then(KeyboardManager.getAllBuilds)
+      .then(editedBuild => {
+        this.props.history.push("/my-builds");
+        this.setState({ build: editedBuild });
+      });
+
   componentDidMount() {
-    KeyboardManager.getAll("build").then(allBuilds => {
+    KeyboardManager.getAllBuilds("build").then(allBuilds => {
       this.setState({
         build: allBuilds
       });
@@ -36,7 +59,9 @@ class ApplicationViews extends Component {
             return <Home />;
           }}
         />
+
         <Route
+          exact
           path="/my-builds"
           render={props => {
             return (
@@ -46,6 +71,20 @@ class ApplicationViews extends Component {
                 deleteBuild={this.deleteBuild}
               />
             );
+          }}
+        />
+
+        <Route
+          path="/my-builds/add-build"
+          render={props => {
+            return <BuildForm {...props} addBuild={this.addBuild} />;
+          }}
+        />
+
+        <Route
+          path="/my-builds/:buildId(\d+)/edit"
+          render={props => {
+            return <EditBuild {...props} updateBuild={this.updateBuild} />;
           }}
         />
       </>

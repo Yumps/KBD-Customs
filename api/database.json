@@ -17,9 +17,9 @@
       "name": "THE FAT BOY",
       "userId": 1,
       "caseId": 1,
-      "pcbId": 1,
+      "pcbId": "4",
       "keyswitchId": 1,
-      "keycapId": 1,
+      "keycapId": "4",
       "public": false
     },
     {
@@ -28,9 +28,17 @@
       "userId": 1,
       "caseId": 6,
       "pcbId": 6,
-      "keyswitchId": 6,
-      "keycapId": 6,
+      "keyswitchId": "4",
+      "keycapId": "1",
       "public": false
+    },
+    {
+      "name": "ThE biGGEreSt oF bOyYOs",
+      "caseId": "2",
+      "pcbId": "2",
+      "keyswitchId": "2",
+      "keycapId": "2",
+      "id": 14
     }
   ],
   "cases": [

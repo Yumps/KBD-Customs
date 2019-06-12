@@ -4,7 +4,7 @@ export default {
   get(resource, id) {
     return fetch(`${src}/${resource}/${id}`).then(e => e.json());
   },
-  getAll() {
+  getAllBuilds() {
     return fetch(
       `${src}/build?_expand=case&_expand=pcb&_expand=keycap&_expand=keyswitch`
     ).then(e => e.json());
@@ -31,5 +31,8 @@ export default {
       },
       body: JSON.stringify(editedPart)
     }).then(e => e.json());
+  },
+  getAll(resource) {
+    return fetch(`${src}/${resource}`).then(e => e.json());
   }
 };
