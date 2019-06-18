@@ -34,5 +34,10 @@ export default {
   },
   getAll(resource) {
     return fetch(`${src}/${resource}`).then(e => e.json());
+  },
+  login(email, password) {
+    return fetch(`${src}/users?email=${email}&password=${password}`).then(
+      response => response.json()
+    );
   }
 };

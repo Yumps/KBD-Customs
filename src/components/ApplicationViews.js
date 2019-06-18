@@ -7,6 +7,8 @@ import Builds from "./KeyboardBuilder/myBuilds";
 import KeyboardManager from "../modules/KeyboardManager";
 import BuildForm from "./KeyboardBuilder/buildForm";
 import EditBuild from "./KeyboardBuilder/editBuilds";
+import Login from "./login/login";
+import Register from "./login/register";
 
 class ApplicationViews extends Component {
   state = {
@@ -85,6 +87,35 @@ class ApplicationViews extends Component {
           path="/my-builds/:buildId(\d+)/edit"
           render={props => {
             return <EditBuild {...props} updateBuild={this.updateBuild} />;
+          }}
+        />
+
+        <Route
+          path="/register"
+          render={props => {
+            return (
+              <Register
+                {...props}
+                addUser={this.props.addUser}
+                users={this.props.users}
+                login={this.props.login}
+                getAll={this.props.getAllUsers}
+              />
+            );
+          }}
+        />
+
+        <Route
+          exact
+          path="/login"
+          render={props => {
+            return (
+              <Login
+                {...props}
+                populateAppState={this.props.populateAppState}
+                login={this.props.login}
+              />
+            );
           }}
         />
       </>
