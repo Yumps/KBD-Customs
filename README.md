@@ -20,4 +20,5 @@ json-server -p 5002 database.json
 ```
 
 ## DB-Diagram
-![Keyboard DBD](https://user-images.githubusercontent.com/47504641/59057051-237a5080-885f-11e9-84a9-600be1dd0fac.PNG)
+![DB-Diagram](https://user-images.githubusercontent.com/47504641/59716658-0be68480-91dc-11e9-9e03-f8a8080c7c53.PNG)
+
