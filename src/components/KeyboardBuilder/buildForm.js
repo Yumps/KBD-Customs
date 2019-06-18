@@ -1,7 +1,15 @@
 import React, { Component } from "react";
-import { Card, Form, FormGroup, Label, Button, Input, Col } from "reactstrap";
+import {
+  Card,
+  Form,
+  FormGroup,
+  Label,
+  Button,
+  Input,
+  Col,
+  CardBody
+} from "reactstrap";
 import KeyboardManager from "../../modules/KeyboardManager";
-
 class BuildForm extends Component {
   state = {
     allCases: [],
@@ -45,7 +53,8 @@ class BuildForm extends Component {
       caseId: this.state.caseId,
       pcbId: this.state.pcbId,
       keyswitchId: this.state.keyswitchId,
-      keycapId: this.state.keycapId
+      keycapId: this.state.keycapId,
+      userId: sessionStorage.getItem("User")
     };
     this.props.addBuild(build);
     this.props.history.push("/my-builds");
@@ -58,86 +67,103 @@ class BuildForm extends Component {
     let allKeycaps = this.state.allKeycaps;
     return (
       <>
-        <Form>
-          <br />
-          <Col>
-            <Card>
-              <FormGroup>
-                <Label>Name:</Label>
-                <Input type="text" required onChange={this.handleFieldChange} id="name" placeholder="Name of Keyboard">
-                </Input>
-              </FormGroup>
+        <br />
+        <Col sm="8" md={{ offset: 2 }}>
+          <Card outline color="primary">
+            <br/>
+            <h1 className="text-center">New Build!</h1>
+            <CardBody>
+              <Form>
+                <FormGroup>
+                  <Label>Name:</Label>
+                  <Input
+                    type="text"
+                    required
+                    onChange={this.handleFieldChange}
+                    id="name"
+                    placeholder="Name of Keyboard"
+                  />
+                </FormGroup>
 
-
-              <FormGroup>
-                <Label>Cases:</Label>
-                <Input
-                  type="select"
-                  id="caseId"
-                  onChange={this.handleFieldChange}
-                >
-                  <option defaultValue value="">Case Options:</option>
-                  {allCases.map(items => (
-                    <option key={items.id} id="caseId" value={items.id}>
-                      {items.name}
+                <FormGroup>
+                  <Label>Cases:</Label>
+                  <Input
+                    type="select"
+                    id="caseId"
+                    onChange={this.handleFieldChange}
+                  >
+                    <option defaultValue value="">
+                      Case Options:
                     </option>
-                  ))}
-                </Input>
-              </FormGroup>
+                    {allCases.map(items => (
+                      <option key={items.id} id="caseId" value={items.id}>
+                        {items.name}
+                      </option>
+                    ))}
+                  </Input>
+                </FormGroup>
 
-              <FormGroup>
-                <Label>PCBs:</Label>
-                <Input
-                  type="select"
-                  id="pcbId"
-                  onChange={this.handleFieldChange}
-                >
-                  <option defaultValue value="">PCB Options:</option>
-                  {allPCBs.map(items => (
-                    <option key={items.id} id="pcbId" value={items.id}>
-                      {items.name}
+                <FormGroup>
+                  <Label>PCBs:</Label>
+                  <Input
+                    type="select"
+                    id="pcbId"
+                    onChange={this.handleFieldChange}
+                  >
+                    <option defaultValue value="">
+                      PCB Options:
                     </option>
-                  ))}
-                </Input>
-              </FormGroup>
+                    {allPCBs.map(items => (
+                      <option key={items.id} id="pcbId" value={items.id}>
+                        {items.name}
+                      </option>
+                    ))}
+                  </Input>
+                </FormGroup>
 
-              <FormGroup>
-                <Label>Keyswitches:</Label>
-                <Input
-                  type="select"
-                  id="keyswitchId"
-                  onChange={this.handleFieldChange}
-                >
-                  <option defaultValue value=""> Keyswitch Options:</option>
-                  {allKeyswitches.map(items => (
-                    <option key={items.id} id="keyswitchId" value={items.id}>
-                      {items.name}
+                <FormGroup>
+                  <Label>Keyswitches:</Label>
+                  <Input
+                    type="select"
+                    id="keyswitchId"
+                    onChange={this.handleFieldChange}
+                  >
+                    <option defaultValue value="">
+                      {" "}
+                      Keyswitch Options:
                     </option>
-                  ))}
-                </Input>
-              </FormGroup>
+                    {allKeyswitches.map(items => (
+                      <option key={items.id} id="keyswitchId" value={items.id}>
+                        {items.name}
+                      </option>
+                    ))}
+                  </Input>
+                </FormGroup>
 
-              <FormGroup>
-                <Label>Keycaps:</Label>
-                <Input
-                  type="select"
-                  id="keycapId"
-                  onChange={this.handleFieldChange}
-                >
-                  <option defaultValue value="">Keycap Options:</option>
-                  {allKeycaps.map(items => (
-                    <option key={items.id} id="keycapId" value={items.id}>
-                      {items.name}
+                <FormGroup>
+                  <Label>Keycaps:</Label>
+                  <Input
+                    type="select"
+                    id="keycapId"
+                    onChange={this.handleFieldChange}
+                  >
+                    <option defaultValue value="">
+                      Keycap Options:
                     </option>
-                  ))}
-                </Input>
-              </FormGroup>
-              <Button outline color="info" onClick={this.constructBuild}>
-                Create Build
-              </Button>
-            </Card>
-          </Col>
-        </Form>
+                    {allKeycaps.map(items => (
+                      <option key={items.id} id="keycapId" value={items.id}>
+                        {items.name}
+                      </option>
+                    ))}
+                  </Input>
+                </FormGroup>
+                <Button outline color="info" onClick={this.constructBuild}>
+                  Create Build
+                </Button>
+              </Form>
+            </CardBody>
+          </Card>
+        </Col>
       </>
     );
   }
