@@ -21,13 +21,18 @@ class EditBuild extends Component {
     caseId: "",
     pcbId: "",
     keyswitchId: "",
-    keycapId: ""
+    keycapId: "",
+    public: false
   };
 
   handleFieldChange = evt => {
     const stateToChange = {};
     stateToChange[evt.target.id] = evt.target.value;
     this.setState(stateToChange);
+  };
+
+  handleCheck = () => {
+    this.setState({ public: !this.state.public });
   };
 
   updateExistingBuild = () => {
@@ -37,7 +42,8 @@ class EditBuild extends Component {
       caseId: this.state.caseId,
       pcbId: this.state.pcbId,
       keyswitchId: this.state.keyswitchId,
-      keycapId: this.state.keycapId
+      keycapId: this.state.keycapId,
+      public: this.state.public
     };
     this.props
       .updateBuild(editedBuild)
@@ -67,7 +73,8 @@ class EditBuild extends Component {
           caseId: build.caseId,
           pcbId: build.pcbId,
           keyswitchId: build.keyswitchId,
-          keycapId: build.keycapId
+          keycapId: build.keycapId,
+          public: this.state.public
         });
       }
     );
@@ -162,6 +169,16 @@ class EditBuild extends Component {
                     ))}
                   </Input>
                 </FormGroup>
+
+                <FormGroup>
+                  <Col>
+                    <Label>
+                      <Input type="checkbox" onChange={this.handleCheck} />
+                      Share Build
+                    </Label>
+                  </Col>
+                </FormGroup>
+
                 <Button outline color="info" onClick={this.updateExistingBuild}>
                   Update Build
                 </Button>

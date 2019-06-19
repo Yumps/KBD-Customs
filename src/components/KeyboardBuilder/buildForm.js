@@ -20,7 +20,8 @@ class BuildForm extends Component {
     caseId: "",
     pcbId: "",
     keyswitchId: "",
-    keycapId: ""
+    keycapId: "",
+    public: false
   };
 
   componentDidMount() {
@@ -54,10 +55,15 @@ class BuildForm extends Component {
       pcbId: this.state.pcbId,
       keyswitchId: this.state.keyswitchId,
       keycapId: this.state.keycapId,
-      userId: sessionStorage.getItem("User")
+      userId: sessionStorage.getItem("User"),
+      public: this.state.public
     };
     this.props.addBuild(build);
     this.props.history.push("/my-builds");
+  };
+
+  handleCheck = () => {
+    this.setState({ public: !this.state.public });
   };
 
   render() {
@@ -65,12 +71,13 @@ class BuildForm extends Component {
     let allPCBs = this.state.allPCBs;
     let allKeyswitches = this.state.allKeyswitches;
     let allKeycaps = this.state.allKeycaps;
+
     return (
       <>
         <br />
         <Col sm="8" md={{ offset: 2 }}>
           <Card outline color="primary">
-            <br/>
+            <br />
             <h1 className="text-center">New Build!</h1>
             <CardBody>
               <Form>
@@ -157,6 +164,16 @@ class BuildForm extends Component {
                     ))}
                   </Input>
                 </FormGroup>
+
+                <FormGroup>
+                  <Col>
+                  <Label>
+                    <Input type="checkbox" onChange={this.handleCheck} />
+                    Share Build
+                  </Label>
+                  </Col>
+                </FormGroup>
+
                 <Button outline color="info" onClick={this.constructBuild}>
                   Create Build
                 </Button>

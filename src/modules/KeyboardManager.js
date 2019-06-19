@@ -6,7 +6,7 @@ export default {
   },
   getAllBuilds() {
     return fetch(
-      `${src}/build?_expand=case&_expand=pcb&_expand=keycap&_expand=keyswitch`
+      `${src}/build?_expand=case&_expand=pcb&_expand=keycap&_expand=keyswitch&_expand=user`
     ).then(e => e.json());
   },
   post(resource, newPart) {
@@ -18,8 +18,8 @@ export default {
       body: JSON.stringify(newPart)
     }).then(e => e.json());
   },
-  delete(resource, id) {
-    return fetch(`${src}/${resource}/${id}`, {
+  delete(id) {
+    return fetch(`${src}/build/${id}`, {
       method: "DELETE"
     }).then(e => e.json());
   },

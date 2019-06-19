@@ -6,18 +6,62 @@
       "firstName": "no",
       "lastName": "yes",
       "id": 1
+    },
+    {
+      "email": "no@no.com",
+      "password": "no",
+      "firstName": "yes",
+      "lastName": "no",
+      "id": 2
+    },
+    {
+      "email": "maybe@maybe.com",
+      "password": "maybe",
+      "firstName": "maybe",
+      "lastName": "no",
+      "id": 3
     }
   ],
   "build": [
     {
-      "id": 4,
-      "name": "OH LAWD HE COMIN'",
-      "userId": 1,
-      "caseId": 6,
-      "pcbId": 6,
-      "keyswitchId": "4",
+      "name": "yes",
+      "caseId": "3",
+      "pcbId": "1",
+      "keyswitchId": "1",
       "keycapId": "1",
-      "public": false
+      "userId": "1",
+      "public": false,
+      "id": 1
+    },
+    {
+      "name": "maybe",
+      "caseId": "2",
+      "pcbId": "2",
+      "keyswitchId": "1",
+      "keycapId": "2",
+      "userId": "2",
+      "public": true,
+      "id": 4
+    },
+    {
+      "name": "knsaknsalkdn",
+      "caseId": "1",
+      "pcbId": "1",
+      "keyswitchId": "1",
+      "keycapId": "1",
+      "userId": "3",
+      "public": false,
+      "id": 5
+    },
+    {
+      "name": "The True Public Build!",
+      "caseId": "5",
+      "pcbId": "4",
+      "keyswitchId": "1",
+      "keycapId": "3",
+      "userId": "2",
+      "public": true,
+      "id": 6
     }
   ],
   "cases": [
@@ -27,7 +71,7 @@
       "shop_url": "https://kbdfans.cn/collections/60-layout-case/products/pre-orderkbdfans-5-60-case",
       "name": "KBDfans 5° 60% Keyboard Aluminum Case",
       "size": "60%",
-      "price": "$88.00"
+      "price": "88.00"
     },
     {
       "id": 2,
@@ -35,7 +79,7 @@
       "shop_url": "https://kbdfans.cn/collections/60-layout-case/products/kbdfans-tofu-60-aluminum-case",
       "name": "KBDfans Tofu 60% Aluminum Case",
       "size": "60%",
-      "price": "$88.00"
+      "price": "88.00"
     },
     {
       "id": 3,
@@ -43,7 +87,7 @@
       "shop_url": "https://kbdfans.cn/collections/60-layout-case/products/customized-gh60-aluminum-case",
       "name": "60% Aluminum Low Profile Case",
       "size": "60%",
-      "price": "$45.00"
+      "price": "45.00"
     },
     {
       "id": 4,
@@ -51,7 +95,7 @@
       "shop_url": "https://kbdfans.cn/collections/60-layout-case/products/60-keyboard-wood-case",
       "name": "60% Wood Case",
       "size": "60%",
-      "price": "$49.00"
+      "price": "49.00"
     },
     {
       "id": 5,
@@ -59,7 +103,7 @@
       "shop_url": "https://kbdfans.cn/collections/60-layout-case/products/60-bamboo-case",
       "name": "60% Bamboo Case",
       "size": "60%",
-      "price": "$58.00"
+      "price": "58.00"
     },
     {
       "id": 6,
@@ -67,7 +111,7 @@
       "shop_url": "https://kbdfans.cn/collections/65-layout-case/products/kbdfans-tada68-aluminum-case",
       "name": "KBDfans Tada68 Low Profile Aluminum Case",
       "size": "65%",
-      "price": "$55.00"
+      "price": "55.00"
     },
     {
       "id": 7,
@@ -75,7 +119,7 @@
       "shop_url": "https://kbdfans.cn/collections/65-layout-case/products/in-stocktofu-65-aluminum-case",
       "name": "TOFU 65% Aluminum case",
       "size": "65%",
-      "price": "$109.00"
+      "price": "109.00"
     },
     {
       "id": 8,
@@ -83,7 +127,7 @@
       "shop_url": "https://kbdfans.cn/collections/65-layout-case/products/tada68-aluminum-case",
       "name": "TADA68 High Profile Aluminum Case",
       "size": "65%",
-      "price": "$99.00"
+      "price": "99.00"
     },
     {
       "id": 9,
@@ -91,7 +135,7 @@
       "shop_url": "https://kbdfans.cn/collections/65-layout-case/products/tada68-plastic-case",
       "name": "Tada68 Plastic Case",
       "size": "65%",
-      "price": "$10.00"
+      "price": "10.00"
     }
   ],
   "pcbs": [
@@ -101,7 +145,7 @@
       "shop_url": "https://kbdfans.cn/collections/60/products/dz60-60-pcb",
       "name": "DZ60 REV 3.0 60% Mechanical Keyboard PCB",
       "size": "60%",
-      "price": "$35.00"
+      "price": "35.00"
     },
     {
       "id": 2,
@@ -109,7 +153,7 @@
       "shop_url": "https://kbdfans.cn/collections/60/products/gk64-rgb-60-64keys-hot-swap-pcb",
       "name": "GK64 RGB 60% Hot Swap PCB",
       "size": "60%",
-      "price": "$39.00"
+      "price": "39.00"
     },
     {
       "id": 3,
@@ -117,7 +161,7 @@
       "shop_url": "",
       "name": "Dz60rgb Hot Swap Custom Keyboard PCB",
       "size": "60%",
-      "price": "$55.00"
+      "price": "55.00"
     },
     {
       "id": 4,
@@ -125,7 +169,7 @@
       "shop_url": "https://kbdfans.cn/collections/60/products/dz60rgb-ansi-mechanical-keyboard-pcb",
       "name": "DZ60RGB-ANSI Mechanical keyboard PCB",
       "size": "60%",
-      "price": "$55.00"
+      "price": "55.00"
     },
     {
       "id": 5,
@@ -133,7 +177,7 @@
       "shop_url": "https://kbdfans.cn/collections/65/products/tada68-pcn",
       "name": "65% Tada68 Keyboard PCB",
       "size": "65%",
-      "price": "$55.00"
+      "price": "55.00"
     },
     {
       "id": 6,
@@ -141,7 +185,7 @@
       "shop_url": "https://kbdfans.cn/collections/65/products/kbd65-65-custom-mechanical-keyboard-pcb",
       "name": "KBD65 v2 65% Custom Mechanical Keyboard PCB",
       "size": "65%",
-      "price": "$39.00"
+      "price": "39.00"
     },
     {
       "id": 7,
@@ -149,7 +193,7 @@
       "shop_url": "https://kbdfans.cn/collections/65/products/dz68rgb-hot-swap-rgb-pcb",
       "name": "DZ65RGB Hot Swap RGB PCB",
       "size": "65%",
-      "price": "$58.00"
+      "price": "58.00"
     }
   ],
   "keyswitches": [
@@ -159,7 +203,7 @@
       "shop_url": "https://zealpc.net/collections/switches/products/zealio",
       "name": "Purple Zealios V2 Switches",
       "type": "Tactile",
-      "price": "$10.00"
+      "price": "10.00"
     },
     {
       "id": 2,
@@ -167,7 +211,7 @@
       "shop_url": "https://novelkeys.xyz/collections/switches/products/novelkeys-x-kailh-box-heavy-switches",
       "name": "NovelKeys x Kailh BOX Heavy Switches",
       "type": "Linear, Tactile, and Clicky",
-      "price": "$3.00"
+      "price": "3.00"
     },
     {
       "id": 3,
@@ -175,7 +219,7 @@
       "shop_url": "https://novelkeys.xyz/collections/switches/products/kailh-pro-switches",
       "name": "Kailh Pro Switches",
       "type": "Linear, Tactile, and Clicky",
-      "price": "$2.80"
+      "price": "2.80"
     },
     {
       "id": 4,
@@ -183,7 +227,7 @@
       "shop_url": "https://novelkeys.xyz/collections/switches/products/novelkeys-x-kailh-speed-heavy-switches",
       "name": "NovelKeys x Kailh Speed Heavy Switches",
       "type": "Linear, Tactile, and Clicky",
-      "price": "$3.00"
+      "price": "3.00"
     },
     {
       "id": 5,
@@ -191,7 +235,7 @@
       "shop_url": "https://novelkeys.xyz/collections/switches/products/cherry-switches",
       "name": "Cherry Switches",
       "type": "Linear, Tactile, and Clicky",
-      "price": "$3-$5"
+      "price": "3.00"
     },
     {
       "id": 6,
@@ -199,7 +243,7 @@
       "shop_url": "https://novelkeys.xyz/collections/switches/products/gateron-silent-switches?variant=19441364271197",
       "name": "Gateron Silent Switches",
       "type": "Linear and Tactile",
-      "price": "$3.80"
+      "price": "3.80"
     },
     {
       "id": 7,
@@ -207,7 +251,7 @@
       "shop_url": "https://novelkeys.xyz/collections/switches/products/yok-trash-pandas",
       "name": "YOK Trash Pandas",
       "type": "Linear",
-      "price": "$5.50"
+      "price": "5.50"
     },
     {
       "id": 8,
@@ -215,7 +259,7 @@
       "shop_url": "https://drop.com/buy/massdrop-halo-switch-pack/talk#discussions",
       "name": "Massdrop Halo Switch Pack",
       "type": "Tactile",
-      "price": "$45"
+      "price": "45"
     },
     {
       "id": 9,
@@ -232,49 +276,49 @@
       "image_url": "https://massdrop-s3.imgix.net/product-images/dwarf-factory-miracle-island-artisan-keycap/FP/YTEm79VzTFWnAZDGiTrr_006.jpg?auto=format&fm=jpg&fit=crop&w=955&bg=f0f0f0&dpr=2",
       "shop_url": "https://drop.com/buy/dwarf-factory-miracle-island-artisan-keycap",
       "name": "Dwarf Factory Miracle Island Artican Keycaps",
-      "price": "$40"
+      "price": "40"
     },
     {
       "id": 2,
       "image_url": "https://massdrop-s3.imgix.net/product-images/hammer-lagoon-artisan-spacebar/AI7B8904_copy_20170613115925.jpg?auto=format&fm=jpg&fit=fill&w=820&h=547&bg=f0f0f0&dpr=2",
       "shop_url": "https://drop.com/buy/hammer-lagoon-artisan-spacebar",
       "name": "Hammer Lagoon Artisan Spacebar",
-      "price": "$65"
+      "price": "65"
     },
     {
       "id": 3,
       "image_url": "https://massdrop-s3.imgix.net/product-images/drop-redsuns-gmk-red-samurai-keycap-set/FP/FMeWdbpSCOMO4m1caWt3_CB5A0741-copy.jpg?auto=format&fm=jpg&fit=fill&w=820&h=547&bg=f0f0f0&dpr=2",
       "shop_url": "https://drop.com/buy/drop-redsuns-gmk-red-samurai-keycap-set",
       "name": "Drop + RedSuns GMK Red Samurai Keycap Set",
-      "price": "$85"
+      "price": "85"
     },
     {
       "id": 4,
       "image_url": "https://massdrop-s3.imgix.net/product-images/npkc-gradient-keycap-set/MD-25041_20160831161148_3c1bcb42c127c4c0.jpg?auto=format&fm=jpg&fit=fill&w=820&h=547&bg=f0f0f0&dpr=2",
       "shop_url": "https://drop.com/buy/npkc-gradient-keycap-set",
       "name": "NPKC Gradient Keycap Set",
-      "price": "$30"
+      "price": "30"
     },
     {
       "id": 5,
       "image_url": "https://massdrop-s3.imgix.net/product-images/drop-matt3o-mt3-dev-tty-keycap-set/FP/YrWCzWMwRQGHS92RfKvA_2771-copy.jpg?auto=format&fm=jpg&fit=fill&w=820&h=547&bg=f0f0f0&dpr=2",
       "shop_url": "https://drop.com/buy/drop-matt3o-mt3-dev-tty-keycap-set",
       "name": "Drop + Matt3O MT3 /dev/tty Keycap Set",
-      "price": "$80"
+      "price": "80"
     },
     {
       "id": 6,
       "image_url": "https://cdn.shopify.com/s/files/1/1473/3902/products/1_6c06d722-b7bc-4f17-80f0-36b216add7f9_1800x1800.jpg?v=1559191748",
       "shop_url": "https://kbdfans.cn/collections/keycaps/products/maxkey-sa-ka-keycaps-set?variant=28772883595312",
       "name": "MAXKEY SA KA Keycaps set",
-      "price": "$99.00"
+      "price": "99.00"
     },
     {
       "id": 7,
       "image_url": "https://cdn10.bigcommerce.com/s-ktpi93fl/products/225/images/1433/hcg__90512.1536604796.500.659.jpg?c=2",
       "shop_url": "https://pimpmykeyboard.com/dsa-high-contrast-granite-keyset/",
       "name": "DSA High Contrast Granite Keyset",
-      "price": "$100.00"
+      "price": "100.00"
     }
   ]
 }
