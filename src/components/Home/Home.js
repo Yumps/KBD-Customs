@@ -24,8 +24,8 @@ class Home extends Component {
             </p>
             <hr className="my-3" />
             <p>
-              A lot of info for building custom keyboards is scattered, so info
-              can be tough to come by or very vague. I have created an app to
+              A lot of info for building custom keyboards is vague, so info
+              can be difficult to understand. I have created an app to
               hopefully help clear up some information and make it easier to
               find the answers you need; as well as provide a builder, so that
               the user could create a keyboard using one tab rather than

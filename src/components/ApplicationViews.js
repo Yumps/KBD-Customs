@@ -9,6 +9,7 @@ import BuildForm from "./KeyboardBuilder/buildForm";
 import EditBuild from "./KeyboardBuilder/editBuilds";
 import Login from "./login/login";
 import Register from "./login/register";
+import SharedBuilds from './KeyboardBuilder/sharedBuilds'
 
 class ApplicationViews extends Component {
   state = {
@@ -20,7 +21,7 @@ class ApplicationViews extends Component {
   };
 
   deleteBuild = id =>
-    KeyboardManager.delete("build", id)
+    KeyboardManager.delete(id)
       .then(KeyboardManager.getAllBuilds)
       .then(builds => {
         this.setState({ build: builds });
@@ -44,7 +45,7 @@ class ApplicationViews extends Component {
       });
 
   componentDidMount() {
-    KeyboardManager.getAllBuilds("build").then(allBuilds => {
+    KeyboardManager.getAllBuilds().then(allBuilds => {
       this.setState({
         build: allBuilds
       });
@@ -89,6 +90,10 @@ class ApplicationViews extends Component {
             return <EditBuild {...props} updateBuild={this.updateBuild} />;
           }}
         />
+
+          <Route path="/shared-builds" render={props => {
+            return <SharedBuilds {...props} build={this.state.build} />
+          }}/>
 
         <Route
           path="/register"

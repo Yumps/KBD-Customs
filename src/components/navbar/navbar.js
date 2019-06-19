@@ -10,13 +10,13 @@ class NavBar extends Component {
   userButton = () => {
     if (sessionStorage.getItem("User") !== null) {
       return (
-        <Button className="text-light" onClick={this.logout}>
+        <Button outline color="light" onClick={this.logout}>
           Logout
         </Button>
       );
     } else {
       return (
-        <Link className="text-light" to="/login">
+        <Link className="text-light mt-1" to="/login">
           Login
         </Link>
       );
@@ -26,16 +26,16 @@ class NavBar extends Component {
     return (
       <div>
         <Navbar color="primary" light expand="md">
-          <Nav className="ml-auto">
-            <Link className="text-light" to="/">
+          <Nav>
+            <Link className="text-light mt-1" to="/">
               Home
             </Link>
             <Col ></Col>
-            <Link className="text-light" to="/my-builds">
+            <Link className="text-light mt-1" to="/my-builds">
               My Builds
             </Link>
             <Col ></Col>
-            <Link className="text-light" to="/shared-builds">
+            <Link className="text-light mt-1" to="/shared-builds">
               Build Guides
             </Link>
             <Col ></Col>
