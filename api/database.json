@@ -62,6 +62,16 @@
       "userId": "2",
       "public": true,
       "id": 6
+    },
+    {
+      "name": "bamboo",
+      "caseId": "5",
+      "pcbId": "1",
+      "keyswitchId": "7",
+      "keycapId": "3",
+      "userId": "2",
+      "public": false,
+      "id": 7
     }
   ],
   "cases": [

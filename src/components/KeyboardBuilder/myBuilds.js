@@ -38,7 +38,13 @@ class Builds extends Component {
                       </li>
                       <li>
                         <strong>Shop</strong>:{" "}
-                        <a href={build.case.shop_url}>Buy it here</a>
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={build.case.shop_url}
+                        >
+                          Buy it here
+                        </a>
                       </li>
                       <li>
                         <strong>Price</strong>: ${build.case.price}
@@ -54,7 +60,13 @@ class Builds extends Component {
                       </li>
                       <li>
                         <strong>Shop</strong>:{" "}
-                        <a href={build.pcb.shop_url}>Buy it here</a>
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={build.pcb.shop_url}
+                        >
+                          Buy it here
+                        </a>
                       </li>
                       <li>
                         <strong>Price</strong>: ${build.pcb.price}
@@ -72,7 +84,13 @@ class Builds extends Component {
                       </li>
                       <li>
                         <strong>Shop</strong>:{" "}
-                        <a href={build.keyswitch.shop_url}>Buy it here</a>
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={build.keyswitch.shop_url}
+                        >
+                          Buy it here
+                        </a>
                       </li>
                       <li>
                         <strong>Price</strong>: ${build.keyswitch.price}
@@ -85,7 +103,13 @@ class Builds extends Component {
                       </li>
                       <li>
                         <strong>Shop</strong>:{" "}
-                        <a href={build.keycap.shop_url}>Buy it here</a>
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={build.keycap.shop_url}
+                        >
+                          Buy it here
+                        </a>
                       </li>
                       <li>
                         <strong>Price</strong>: ${build.keycap.price}

@@ -14,7 +14,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <br/>
+        <br />
         <Col>
           <Jumbotron>
             <h3 className="display-4">KBD Customs</h3>
@@ -24,12 +24,12 @@ class Home extends Component {
             </p>
             <hr className="my-3" />
             <p>
-              A lot of info for building custom keyboards is vague, so info
-              can be difficult to understand. I have created an app to
-              hopefully help clear up some information and make it easier to
-              find the answers you need; as well as provide a builder, so that
-              the user could create a keyboard using one tab rather than
-              multiple on your browser.
+              A lot of info for building custom keyboards is vague, so info can
+              be difficult to understand. I have created an app to hopefully
+              help clear up some information and make it easier to find the
+              answers you need; as well as provide a builder, so that the user
+              could create a keyboard using one tab rather than multiple on your
+              browser.
             </p>
           </Jumbotron>
           <CardDeck>
@@ -72,6 +72,90 @@ class Home extends Component {
               <CardFooter />
             </Card>
           </CardDeck>
+
+          <div>
+            <br />
+            <h3>Startup Guides</h3>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.techspot.com/guides/1625-diy-build-your-own-mechanical-keyboard/"
+            >
+              TechSpot
+            </a>{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.reviewgeek.com/7007/everything-you-need-to-start-building-mechanical-keyboards/"
+            >
+              ReviewGeek
+            </a>{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://matt3o.com/all-you-need-to-build-a-custom-keyboard/"
+            >
+              Matt3o
+            </a>{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.extremetech.com/extreme/271677-how-to-build-a-custom-mechanical-keyboard-gamepad"
+            >
+              ExtremeTech
+            </a>{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://mechanicalkeyboards.com/learn.php"
+            >
+              MechanicalKeyboards
+            </a>{" "}
+            <h3>Shops</h3>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://kbdfans.cn/"
+            >
+              KBDfans
+            </a>{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://drop.com/"
+            >
+              Drop
+            </a>{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://mechanicalkeyboards.com/shop"
+            >
+              MechaniclaKeyboards
+            </a>
+            <h3>Informational Guides</h3>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.daskeyboard.com/blog/mechanical-keyboard-guide/"
+            >
+              Das Keyboard
+            </a>{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="http://www.wasdkeyboards.com/mechanical-keyboard-guide"
+            >
+              WASD Keyboards
+            </a>{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.reddit.com/r/MechanicalKeyboards/wiki/index"
+            >
+              Reddit
+            </a>{" "}
+          </div>
         </Col>
       </div>
     );
