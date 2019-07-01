@@ -1,67 +1,23 @@
 {
   "users": [
     {
-      "email": "yes@yes.com",
-      "password": "yes",
-      "firstName": "no",
-      "lastName": "yes",
+      "email": "logan@hotmail.com",
+      "password": "logan",
+      "firstName": "Logan",
+      "lastName": "Palmer",
       "id": 1
-    },
-    {
-      "email": "no@no.com",
-      "password": "no",
-      "firstName": "yes",
-      "lastName": "no",
-      "id": 2
-    },
-    {
-      "email": "maybe@maybe.com",
-      "password": "maybe",
-      "firstName": "maybe",
-      "lastName": "no",
-      "id": 3
     }
   ],
   "build": [
     {
-      "name": "yes",
-      "caseId": "3",
-      "pcbId": "1",
-      "keyswitchId": "1",
-      "keycapId": "1",
-      "userId": "1",
-      "public": false,
-      "id": 1
-    },
-    {
-      "name": "maybe",
-      "caseId": "2",
-      "pcbId": "2",
-      "keyswitchId": "1",
-      "keycapId": "2",
-      "userId": "2",
-      "public": true,
-      "id": 4
-    },
-    {
-      "name": "knsaknsalkdn",
+      "name": "Logan's big build",
       "caseId": "1",
       "pcbId": "1",
       "keyswitchId": "1",
       "keycapId": "1",
-      "userId": "3",
-      "public": false,
-      "id": 5
-    },
-    {
-      "name": "The True Public Build!",
-      "caseId": "5",
-      "pcbId": "4",
-      "keyswitchId": "1",
-      "keycapId": "3",
-      "userId": "2",
+      "userId": "1",
       "public": true,
-      "id": 6
+      "id": 1
     }
   ],
   "cases": [
