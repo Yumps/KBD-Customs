@@ -35,7 +35,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <NavBar/>
+        <NavBar />
         <ApplicationViews
           populateAppState={this.populateAppState}
           login={this.login}

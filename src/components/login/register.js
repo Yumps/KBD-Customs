@@ -49,10 +49,10 @@ class Register extends Component {
     return (
       <div>
         <br/>
-        <Col md={{ size: 3, offset: 5 }}>
+          <h1 className="text-center">Register!</h1>
+        <Col sm="8" md={{ offset: 2 }}>
           <Card>
             <CardBody>
-          <h1 className="text-center">Register!</h1>
               <Form>
                 <FormGroup>
                   <Label>Email:</Label>
@@ -69,7 +69,7 @@ class Register extends Component {
                 <FormGroup>
                   <Label>Password:</Label>
                   <Input
-                    type="password"
+                    type="text"
                     required
                     onChange={this.handleFieldChange}
                     value={this.state.password}

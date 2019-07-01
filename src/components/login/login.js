@@ -60,10 +60,10 @@ class Login extends Component {
     return (
       <div>
         <br />
-        <Col md={{ size: 3, offset: 5 }}>
+        <h1 className="text-center">Welcome!</h1>
+        <Col sm="6" md={{ size: 8, offset: 2 }}>
           <Card>
             <CardBody>
-        <h1 className="text-center">Welcome!</h1>
               <Form>
                 <FormGroup>
                   <Label>Email:</Label>
@@ -78,7 +78,7 @@ class Login extends Component {
                 <FormGroup>
                   <Label>Password:</Label>
                   <Input
-                    type="password"
+                    type="text"
                     required
                     onChange={this.handleFieldChange}
                     id="password"

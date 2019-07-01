@@ -1,27 +1,13 @@
 import React, { Component } from "react";
-import { Card, CardHeader, CardText, Button, CardBody, Col } from "reactstrap";
+import { Card, CardHeader, CardText, CardBody, Col } from "reactstrap";
 
-class Builds extends Component {
+class SharedBuilds extends Component {
   render() {
     return (
       <div>
         <br />
-        <div className="d-flex justify-content-center">
-          <Button
-            size="lg"
-            outline
-            color="success"
-            onClick={() => {
-              this.props.history.push(`/my-builds/add-build`);
-            }}
-          >
-            Create a Build
-          </Button>
-        </div>
-        <br />
-
         {this.props.build
-          .filter(item => item.userId === sessionStorage.getItem("User"))
+          .filter(item => item.public === true)
           .map(build => (
             <Col sm="9" md={{ offset: 2 }} key={build.id}>
               <Card outline color="dark">
@@ -104,25 +90,12 @@ class Builds extends Component {
                       </strong>
                     </CardText>
                   </div>
-                  <br />
-                  <div className="d-flex justify-content-between">
-                    <Button
-                      outline
-                      color="danger"
-                      onClick={() => this.props.deleteBuild(build.id)}
-                    >
-                      Delete
-                    </Button>{" "}
-                    <Button
-                      outline
-                      color="primary"
-                      onClick={() => {
-                        this.props.history.push(`/my-builds/${build.id}/edit`);
-                      }}
-                    >
-                      Edit
-                    </Button>
-                  </div>
+                  <p>
+                    Created by:{" "}
+                    <strong>
+                      {build.user.firstName} {build.user.lastName}
+                    </strong>
+                  </p>
                 </CardBody>
               </Card>
               <br />
@@ -133,4 +106,4 @@ class Builds extends Component {
   }
 }
 
-export default Builds;
+export default SharedBuilds;
