@@ -88,7 +88,7 @@ class EditBuild extends Component {
     return (
       <>
         <br />
-        <Col sm="8" md={{ offset: 2 }}>
+        <Col sm="8" md={{ size: 4 ,offset: 4 }}>
           <Card outline color="success">
             <br />
             <h1 className="text-center"> Edit Build!</h1>

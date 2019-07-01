@@ -75,7 +75,7 @@ class BuildForm extends Component {
     return (
       <>
         <br />
-        <Col sm="8" md={{ offset: 2 }}>
+        <Col sm="8" md={{ size: 4,offset: 4 }}>
           <Card outline color="primary">
             <br />
             <h1 className="text-center">New Build!</h1>
@@ -99,7 +99,7 @@ class BuildForm extends Component {
                     id="caseId"
                     onChange={this.handleFieldChange}
                   >
-                    <option defaultValue value="">
+                    <option selected disabled hidden value="">
                       Case Options:
                     </option>
                     {allCases.map(items => (
@@ -117,7 +117,7 @@ class BuildForm extends Component {
                     id="pcbId"
                     onChange={this.handleFieldChange}
                   >
-                    <option defaultValue value="">
+                    <option selected disabled hidden value="">
                       PCB Options:
                     </option>
                     {allPCBs.map(items => (
@@ -135,7 +135,7 @@ class BuildForm extends Component {
                     id="keyswitchId"
                     onChange={this.handleFieldChange}
                   >
-                    <option defaultValue value="">
+                    <option selected disabled hidden value="">
                       {" "}
                       Keyswitch Options:
                     </option>
@@ -154,7 +154,7 @@ class BuildForm extends Component {
                     id="keycapId"
                     onChange={this.handleFieldChange}
                   >
-                    <option defaultValue value="">
+                    <option selected disabled hidden value="">
                       Keycap Options:
                     </option>
                     {allKeycaps.map(items => (
@@ -167,10 +167,10 @@ class BuildForm extends Component {
 
                 <FormGroup>
                   <Col>
-                  <Label>
-                    <Input type="checkbox" onChange={this.handleCheck} />
-                    Share Build
-                  </Label>
+                    <Label>
+                      <Input type="checkbox" onChange={this.handleCheck} />
+                      Share Build
+                    </Label>
                   </Col>
                 </FormGroup>
 
